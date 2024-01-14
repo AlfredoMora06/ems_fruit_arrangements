@@ -10,5 +10,5 @@
 /build
 
 # misc
-.DS_Storex
+.DS_Store
 .env*
