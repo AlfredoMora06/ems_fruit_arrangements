@@ -1,3 +1,4 @@
+import Navbar from "../components/Navbar";
 
 export default function Home():JSX.Element {
   return (
@@ -8,7 +9,7 @@ export default function Home():JSX.Element {
           height: "100vh" 
         }}
       >
-        <></>
+        <Navbar />
       </div>
     </>
   )
