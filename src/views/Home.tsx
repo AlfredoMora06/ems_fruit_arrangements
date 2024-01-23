@@ -29,15 +29,28 @@ export default function Home():JSX.Element {
           }}
         >
           <Container>
-            <Grid container alignItems={'center'}>
+            <Grid container alignItems={'center'} justifyContent={'center'}>
               <Grid item xs={11} md={12} sx={{margin: 0, position: 'absolute', ...isMobileStyles }}>
                 <Fade in={true} timeout={2000}>
-                  <Typography variant="h1" fontFamily={'Abhaya Libre'} sx={{color: "#D89D44"}} align="center" fontWeight={700}>
-                    {isMobile ? `EMS FRUIT ARRANGEMENTS` : `EMSFRUITARRANGEMENTS`}
+                  <Typography 
+                    fontFamily={'Abhaya Libre'} 
+                    sx={{color: "#D89D44"}} 
+                    align="center" 
+                    fontWeight={700}
+                    fontSize={isMobile ? 50 : 90}
+                  >
+                    EMS FRUIT ARRANGEMENTS
                   </Typography>
                 </Fade>
                 <Fade in={true} timeout={3000}>
-                  <Typography variant="h3" fontFamily={'Abhaya Libre'} sx={{color: "#D89D44"}} align="center" fontWeight={700}>
+                  <Typography 
+                    variant="h3" 
+                    fontFamily={'Abhaya Libre'} 
+                    sx={{color: "#D89D44"}} 
+                    align="center" 
+                    fontWeight={700}
+                    fontSize={isMobile ? 30 : 50}
+                  >
                     “Bringing Happiness One Strawberry At A Time”
                   </Typography>
                 </Fade>

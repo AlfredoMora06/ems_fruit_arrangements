@@ -1,5 +1,7 @@
 import { Container, Grid, Theme, Typography } from "@mui/material"
 import makeStyles from "@mui/styles/makeStyles"
+import { useTheme } from "@mui/material"
+import useMediaQuery from "@mui/material/useMediaQuery"
 
 import Navbar from "../components/Navbar"
 //@ts-ignore
@@ -23,13 +25,15 @@ const useStyles = makeStyles<Theme>(() => ({
 
 export default function About():JSX.Element {
   const classes = useStyles()
+  const theme = useTheme()
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"))
 
   return (
     <>
       <div
         style={{
           background: `#FFE0F1`,
-          minHeight: "100vh" 
+          minHeight: isMobile ? "90vh" : "100vh" 
         }}
       >
         <Navbar />
@@ -47,8 +51,8 @@ export default function About():JSX.Element {
                 <img className={classes.rotateIcon} width="100%" src={SpinBerries} alt="SpinBerries" />
               </div>
             </Grid>
-            <Grid item xs={12} md={6} container alignContent={"center"}>
-              <Typography fontSize={24} fontWeight={700} sx={{color: "#826652"}}>
+            <Grid item xs={11.5} md={6} container alignContent={"center"} justifyContent={"center"}>
+              <Typography fontSize={24} fontWeight={700} sx={{color: "#826652"}} align={isMobile ? 'justify' : 'left'}>
                 Established in 2020, my entrepreneurial journey began with a curiosity for fruit carving, evolving seamlessly into crafting exquisite fruit arrangements. The turning point came with the introduction of chocolate-covered strawberries, creating a distinct identity for my business. Despite early challenges that nearly led to closure, perseverance paved the way. Celebrating almost 4 years of success, I'm proud of the sweet success built from dedication and resilience. I absolute love my business. I look forward to creating elegantly designed treats for your next event!
               </Typography>
             </Grid>
