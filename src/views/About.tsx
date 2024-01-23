@@ -34,7 +34,6 @@ export default function About():JSX.Element {
         style={{
           background: `#FFE0F1`,
           minHeight: "100vh",
-          paddingBottom: 50
         }}
       >
         <Navbar />
