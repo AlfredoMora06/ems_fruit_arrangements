@@ -33,7 +33,7 @@ export default function About():JSX.Element {
       <div
         style={{
           background: `#FFE0F1`,
-          minHeight: isMobile ? "90vh" : "100vh" 
+          minHeight: "100vh",
         }}
       >
         <Navbar />
@@ -43,7 +43,7 @@ export default function About():JSX.Element {
               <div
                 style={{
                   backgroundImage: `url(${Ellipse})`,
-                  backgroundSize: 'auto',
+                  backgroundSize: isMobile ? '55%' : 'auto',
                   backgroundRepeat: 'no-repeat',
                   backgroundPosition: 'center'
                 }}
