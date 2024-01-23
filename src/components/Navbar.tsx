@@ -23,7 +23,7 @@ export default function Navbar(): JSX.Element {
   return (
     <AppBar
       position="static"
-      sx={{ background: "#826652", boxShadow: "none", padding: 4 }}
+      sx={{ background: "#826652", boxShadow: "none", padding: 4, display: { xs: "none", md: "flex" } }}
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>

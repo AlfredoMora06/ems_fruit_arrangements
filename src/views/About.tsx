@@ -4,6 +4,8 @@ import makeStyles from "@mui/styles/makeStyles"
 import Navbar from "../components/Navbar"
 //@ts-ignore
 import SpinBerries from "../assets/SpinBerries.png"
+//@ts-ignore
+import Ellipse from "../assets/Ellipse.png"
 
 const useStyles = makeStyles<Theme>(() => ({
   rotateIcon: {
@@ -34,7 +36,16 @@ export default function About():JSX.Element {
         <Container>
           <Grid container pt={10}>
             <Grid item xs={12} md={6} pb={5}>
-              <img className={classes.rotateIcon} width="90%" src={SpinBerries} alt="SpinBerries" />
+              <div
+                style={{
+                  backgroundImage: `url(${Ellipse})`,
+                  backgroundSize: 'auto',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'center'
+                }}
+              >
+                <img className={classes.rotateIcon} width="100%" src={SpinBerries} alt="SpinBerries" />
+              </div>
             </Grid>
             <Grid item xs={12} md={6} container alignContent={"center"}>
               <Typography fontSize={24} fontWeight={700} sx={{color: "#826652"}}>
