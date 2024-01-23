@@ -10,7 +10,8 @@ export default function Contact():JSX.Element {
       <div
         style={{
           background: `#FFE0F1`,
-          height: "100vh" 
+          minHeight: "100vh",
+          paddingBottom: 50
         }}
       >
         <Navbar />
