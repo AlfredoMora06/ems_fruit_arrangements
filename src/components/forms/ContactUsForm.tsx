@@ -7,6 +7,7 @@ import TextArea from "../Fields/TextArea"
 
 export default function ContactUsForm():JSX.Element {
   const typographyStyle = {color: "#FF53A5", fontSize: 25, fontWeight: 700}
+  
   return (
     <Container>
       <Grid container pt={5}>
