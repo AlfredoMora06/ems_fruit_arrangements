@@ -11,7 +11,7 @@ import Ellipse from "../assets/Ellipse.png"
 
 const useStyles = makeStyles<Theme>(() => ({
   rotateIcon: {
-    animation: "$spin 15s linear infinite"
+    animation: "$spin 25s linear infinite"
   },
   "@keyframes spin": {
     "0%": {

@@ -7,7 +7,7 @@ import Button from "@mui/material/Button"
 import { Fab, Grid } from "@mui/material"
 
 //@ts-ignore
-import Filler from "../assets/Filler.svg"
+import Logo from "../assets/Logo.svg"
 
 
 export default function Navbar(): JSX.Element {
@@ -29,7 +29,7 @@ export default function Navbar(): JSX.Element {
         <Toolbar disableGutters>
           <Box sx={{ flexGrow: 2, display: { xs: "none", md: "flex" } }}>
             <Grid item xs={1} >
-              <img width={"60%"} src={Filler} alt="Filler" />
+              <img width={"70%"} src={Logo} alt="Logo" style={{borderRadius: 50}} />
             </Grid>
             <Grid container item xs={9.5} justifyContent={"center"} alignContent={"center"} ml={8}>
               {pages.map((page, index) => {
