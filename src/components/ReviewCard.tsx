@@ -1,4 +1,4 @@
-import { Box, Grid, Paper, Typography } from "@mui/material"
+import { Grid, Paper, Typography } from "@mui/material"
 import StarIcon from '@mui/icons-material/Star'
 
 
