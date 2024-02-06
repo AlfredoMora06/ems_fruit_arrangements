@@ -10,12 +10,11 @@ export default function Contact():JSX.Element {
       <div
         style={{
           background: `#FFE0F1`,
-          minHeight: "100vh",
-          paddingBottom: 50
+          paddingBottom: 20
         }}
       >
         <Navbar />
-        <img width="100%" src={Map} alt="Map" />
+        <img width="100%" src={Map} alt="Map" style={{maxHeight: '13vh', objectFit: 'cover'}}/>
         <ContactUsForm />
       </div>
     </>

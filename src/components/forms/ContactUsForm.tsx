@@ -10,7 +10,7 @@ export default function ContactUsForm():JSX.Element {
   
   return (
     <Container>
-      <Grid container pt={5}>
+      <Grid container pt={1}>
         <Grid item xs={12}>
           <Typography align="center" fontSize={24} fontWeight={700} sx={{color: "#945A02"}}>
             Have a question or inquiry?
@@ -53,7 +53,7 @@ export default function ContactUsForm():JSX.Element {
             }) => {
               return (
                 <Form>
-                  <Grid container spacing={3} pt={5} justifyContent={"center"}>
+                  <Grid container spacing={1} justifyContent={"center"}>
                     <Grid item xs={12} md={10}>
                       <Typography style={typographyStyle}>
                         Name
