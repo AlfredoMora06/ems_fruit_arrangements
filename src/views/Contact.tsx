@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar"
 import Map from "../assets/Map.png"
 import ContactUsForm from "../components/forms/ContactUsForm"
 
+
 export default function Contact():JSX.Element {
   return (
     <>
@@ -15,7 +16,7 @@ export default function Contact():JSX.Element {
       >
         <Navbar />
         <img width="100%" src={Map} alt="Map" style={{maxHeight: '13vh', objectFit: 'cover'}}/>
-        <ContactUsForm />
+        <ContactUsForm/>
       </div>
     </>
   )

@@ -22,7 +22,7 @@ export default function Home():JSX.Element {
         <Navbar />
         <div
           style={{
-            minHeight: "100vh",
+            minHeight: "87vh",
             backgroundImage: `url(${Berries})`,
             backgroundSize: 'cover',
             backgroundPosition: isMobile ? 'right 28% bottom 50%' : 'center'
@@ -37,7 +37,7 @@ export default function Home():JSX.Element {
                     sx={{color: "#D89D44"}} 
                     align="center" 
                     fontWeight={700}
-                    fontSize={isMobile ? 50 : 90}
+                    fontSize={isMobile ? 45 : 90}
                   >
                     EMS FRUIT ARRANGEMENTS
                   </Typography>

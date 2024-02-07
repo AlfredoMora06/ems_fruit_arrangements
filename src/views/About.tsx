@@ -8,10 +8,12 @@ import Navbar from "../components/Navbar"
 import SpinBerries from "../assets/SpinBerries.png"
 //@ts-ignore
 import Ellipse from "../assets/Ellipse.png"
+import '../App.css'
+
 
 const useStyles = makeStyles<Theme>(() => ({
   rotateIcon: {
-    animation: "$spin 25s linear infinite"
+    animation: "$spin 25s linear infinite",
   },
   "@keyframes spin": {
     "0%": {
@@ -39,14 +41,15 @@ export default function About():JSX.Element {
       >
         <Navbar />
         <Container>
-          <Grid container pt={10}>
+          <Grid container pt={isMobile ? 0 : 10} className="fade-in-bottom">
             <Grid item xs={12} md={6} pb={5}>
               <div
                 style={{
                   backgroundImage: `url(${Ellipse})`,
                   backgroundSize: isMobile ? '55%' : 'auto',
                   backgroundRepeat: 'no-repeat',
-                  backgroundPosition: 'center'
+                  backgroundPosition: 'center',
+                  overflow: 'hidden'
                 }}
               >
                 <img className={classes.rotateIcon} width="100%" src={SpinBerries} alt="SpinBerries" />

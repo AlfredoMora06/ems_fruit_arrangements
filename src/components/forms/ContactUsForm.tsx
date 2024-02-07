@@ -3,13 +3,15 @@ import { Formik, Form } from "formik"
 import * as Yup from "yup"
 import TextField from "../Fields/TextField"
 import TextArea from "../Fields/TextArea"
+import '../../App.css'
+
 
 
 export default function ContactUsForm():JSX.Element {
-  const typographyStyle = {color: "#FF53A5", fontSize: 25, fontWeight: 700}
+  const typographyStyle = {color: "#FF53A5", fontSize: 22, fontWeight: 700}
   
   return (
-    <Container>
+    <Container className="fade-in-bottom">
       <Grid container pt={1}>
         <Grid item xs={12}>
           <Typography align="center" fontSize={24} fontWeight={700} sx={{color: "#945A02"}}>
