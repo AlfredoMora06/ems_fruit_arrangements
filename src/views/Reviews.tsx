@@ -1,6 +1,8 @@
 import { Container, Grid } from "@mui/material"
+
 import Navbar from "../components/Navbar"
 import ReviewCard from "../components/ReviewCard"
+import '../App.css'
 
 
 const reviews: string[] = [
@@ -24,7 +26,7 @@ export default function Reviews():JSX.Element {
       >
         <Navbar />
 
-        <Container sx={{pt: 10}}>
+        <Container sx={{pt: 6}} className="fade-in-bottom">
           <Grid container spacing={3}>
             { reviews.map((review) => {
               return (
