@@ -30,7 +30,7 @@ export default function Home():JSX.Element {
         >
           <Container>
             <Grid container alignItems={'center'} justifyContent={'center'}>
-              <Grid item xs={11} md={12} mt={isMobile ? 43 : 40} sx={{...isMobileStyles }}>
+              <Grid item xs={11} md={12} mt={isMobile ? 35 : 40} sx={{...isMobileStyles }}>
                 <Fade in={true} timeout={2000}>
                   <Typography 
                     fontFamily={'Abhaya Libre'} 

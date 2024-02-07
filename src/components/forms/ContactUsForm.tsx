@@ -8,9 +8,11 @@ import TextField from "../Fields/TextField"
 import TextArea from "../Fields/TextArea"
 import '../../App.css'
 
+type ContactUsFormProps = {
+  sendEmail: (values: any) => Promise<void>
+}
 
-
-export default function ContactUsForm():JSX.Element {
+export default function ContactUsForm({sendEmail}: ContactUsFormProps):JSX.Element {
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down("md"))
   const typographyStyle = {color: "#FF53A5", fontSize: isMobile ? 17 : 22, fontWeight: 700}
@@ -31,6 +33,7 @@ export default function ContactUsForm():JSX.Element {
         <Grid item xs={12}>
           <Formik
             initialValues={{
+              to_name: process.env.REACT_APP_ADMIN_EMAIL, //email id of the admin
               name: "",
               email: "",
               phone: "",
@@ -45,7 +48,7 @@ export default function ContactUsForm():JSX.Element {
             validateOnMount={true}
             onSubmit={async (values, { setSubmitting, resetForm }) => {
               setSubmitting(true)
-
+              await sendEmail(values)
               setSubmitting(false)
               resetForm()
             }}
@@ -114,17 +117,17 @@ export default function ContactUsForm():JSX.Element {
                         value={values.message}
                       />
                     </Grid>
-                    <Grid item xs={12} md={10} container justifyContent={"center"}>
+                    <Grid item xs={12} md={10} container justifyContent={"center"} mt={isMobile ? 2 : 0}>
                       <Button
                         type="submit"
                         variant="contained"
                         sx={{
                           color: "white",
                           backgroundColor: "#D89D44",
-                          fontSize: 26,
+                          fontSize: isMobile ? 18 : 26,
                           fontWeight: 700,
                           borderRadius: 3,
-                          paddingX: 8
+                          paddingX: isMobile ? 4 : 8
                         }}
                       >
                         Submit
