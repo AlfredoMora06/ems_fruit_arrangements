@@ -18,11 +18,11 @@ export default function Home():JSX.Element {
 
   return (
     <>
-      <div style={{ background: `#FFE0F1`}}>
+      <div style={{ background: `#FFE0F1`,}}>
         <Navbar />
         <div
           style={{
-            minHeight: "87vh",
+            minHeight: '90vh',
             backgroundImage: `url(${Berries})`,
             backgroundSize: 'cover',
             backgroundPosition: isMobile ? 'right 28% bottom 50%' : 'center'
@@ -30,7 +30,7 @@ export default function Home():JSX.Element {
         >
           <Container>
             <Grid container alignItems={'center'} justifyContent={'center'}>
-              <Grid item xs={11} md={12} sx={{margin: 0, position: 'absolute', ...isMobileStyles }}>
+              <Grid item xs={11} md={12} mt={isMobile ? 43 : 40} sx={{...isMobileStyles }}>
                 <Fade in={true} timeout={2000}>
                   <Typography 
                     fontFamily={'Abhaya Libre'} 
