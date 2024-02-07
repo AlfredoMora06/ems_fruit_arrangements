@@ -8,6 +8,8 @@ import Button from "@mui/material/Button"
 import { Fab, Grid, List, ListItem, ListItemButton, ListItemText, SwipeableDrawer } from "@mui/material"
 import MenuIcon from "@mui/icons-material/Menu"
 import IconButton from "@mui/material/IconButton"
+import { useTheme } from "@mui/material"
+import useMediaQuery from "@mui/material/useMediaQuery"
 
 //@ts-ignore
 import Logo from "../assets/Logo.svg"
@@ -17,6 +19,8 @@ export default function Navbar(): JSX.Element {
   const location = useLocation()  
   const navigate = useNavigate()
   const [drawer, setDrawer] = React.useState<boolean>(false)
+  const theme = useTheme()
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"))
 
   const toggleDrawer = (open: boolean) =>  (event: React.KeyboardEvent | React.MouseEvent) => { 
     setDrawer(open)
@@ -48,7 +52,7 @@ export default function Navbar(): JSX.Element {
           return (
             <ListItem key={page.title} disablePadding sx={{width: '100%'}}>
               <ListItemButton onClick={() => {handleCloseNavMenuRedirect(page.link)}}>
-                <ListItemText primary={page.title} sx={{fontWeight: 500, color: samePathname ? 'white' : '#D89D44'}}/>
+                <ListItemText primary={page.title} primaryTypographyProps={{fontSize: 18}} sx={{fontWeight: 500, color: samePathname ? 'white' : '#D89D44'}}/>
               </ListItemButton>
             </ListItem>
           )
@@ -60,7 +64,7 @@ export default function Navbar(): JSX.Element {
   return (
     <AppBar
       position="static"
-      sx={{ background: "#826652", boxShadow: "none", paddingY: 1, paddingX: 4 }}
+      sx={{ background: "#826652", boxShadow: "none", paddingY: isMobile ? 0 : 1, paddingX: isMobile ? 0 : 4 }}
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>

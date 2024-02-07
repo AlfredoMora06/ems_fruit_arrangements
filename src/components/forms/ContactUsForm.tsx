@@ -1,6 +1,9 @@
 import { Button, Container, Grid, Typography } from "@mui/material"
 import { Formik, Form } from "formik"
 import * as Yup from "yup"
+import { useTheme } from "@mui/material"
+import useMediaQuery from "@mui/material/useMediaQuery"
+
 import TextField from "../Fields/TextField"
 import TextArea from "../Fields/TextArea"
 import '../../App.css'
@@ -8,16 +11,19 @@ import '../../App.css'
 
 
 export default function ContactUsForm():JSX.Element {
-  const typographyStyle = {color: "#FF53A5", fontSize: 22, fontWeight: 700}
+  const theme = useTheme()
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"))
+  const typographyStyle = {color: "#FF53A5", fontSize: isMobile ? 17 : 22, fontWeight: 700}
+
   
   return (
     <Container className="fade-in-bottom">
       <Grid container pt={1}>
         <Grid item xs={12}>
-          <Typography align="center" fontSize={24} fontWeight={700} sx={{color: "#945A02"}}>
+          <Typography align="center" fontSize={isMobile ? 18 : 24} fontWeight={700} sx={{color: "#945A02"}}>
             Have a question or inquiry?
           </Typography>
-          <Typography align="center" fontSize={24} fontWeight={700} sx={{color: "#945A02"}}>
+          <Typography align="center" fontSize={isMobile ? 18 : 24} fontWeight={700} sx={{color: "#945A02"}}>
             Send us a message and we’ll get back to you as soon as possible!
           </Typography>
         </Grid>

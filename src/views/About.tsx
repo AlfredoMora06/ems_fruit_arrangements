@@ -42,7 +42,7 @@ export default function About():JSX.Element {
         <Navbar />
         <Container>
           <Grid container pt={isMobile ? 0 : 10} className="fade-in-bottom">
-            <Grid item xs={12} md={6} pb={5}>
+            <Grid item xs={12} md={6} pb={isMobile ? 0 : 5}>
               <div
                 style={{
                   backgroundImage: `url(${Ellipse})`,
