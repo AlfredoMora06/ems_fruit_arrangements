@@ -33,14 +33,13 @@ export default function ContactUsForm({sendEmail}: ContactUsFormProps):JSX.Eleme
         <Grid item xs={12}>
           <Formik
             initialValues={{
-              to_name: process.env.REACT_APP_ADMIN_EMAIL, //email id of the admin
-              name: "",
+              from_name: "",
               email: "",
               phone: "",
               message: "",
             }}
             validationSchema={Yup.object().shape({
-              name: Yup.string().required('Name is required'),
+              from_name: Yup.string().required('Name is required'),
               email: Yup.string().required('Email is required'),
               phone: Yup.string().required('Phone is required'),
               message: Yup.string().required('Message is required'),
@@ -70,12 +69,12 @@ export default function ContactUsForm({sendEmail}: ContactUsFormProps):JSX.Eleme
                         Name
                       </Typography>
                       <TextField
-                        error={Boolean(touched.name && errors.name)}
-                        helperText={touched.name && errors.name}
-                        name="name"
+                        error={Boolean(touched.from_name && errors.from_name)}
+                        helperText={touched.from_name && errors.from_name}
+                        name="from_name"
                         onBlur={handleBlur}
                         onChange={handleChange}
-                        value={values.name}
+                        value={values.from_name}
                       />
                     </Grid>
                     <Grid item xs={12} md={10}>
