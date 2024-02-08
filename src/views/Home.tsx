@@ -5,6 +5,7 @@ import useMediaQuery from "@mui/material/useMediaQuery"
 import Navbar from "../components/Navbar"
 //@ts-ignore
 import Berries from "../assets/Berries.png"
+import Footer from "../components/Footer"
 
 export default function Home():JSX.Element {
   const theme = useTheme()
@@ -60,6 +61,7 @@ export default function Home():JSX.Element {
         
         </div>
       </div>
+      <Footer />
     </>
   )
 }
