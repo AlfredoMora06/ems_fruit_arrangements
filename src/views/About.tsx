@@ -9,6 +9,7 @@ import SpinBerries from "../assets/SpinBerries.png"
 //@ts-ignore
 import Ellipse from "../assets/Ellipse.png"
 import '../App.css'
+import Footer from "../components/Footer"
 
 
 const useStyles = makeStyles<Theme>(() => ({
@@ -35,14 +36,14 @@ export default function About():JSX.Element {
       <div
         style={{
           background: `#FFE0F1`,
-          minHeight: "100vh",
+          minHeight: "80vh",
           paddingBottom: isMobile ? 50 : 0,
         }}
       >
         <Navbar />
         <Container>
-          <Grid container pt={isMobile ? 0 : 10} className="fade-in-bottom">
-            <Grid item xs={12} md={6} pb={isMobile ? 0 : 5}>
+          <Grid container className="fade-in-bottom">
+            <Grid item xs={12} md={6}>
               <div
                 style={{
                   backgroundImage: `url(${Ellipse})`,
@@ -57,12 +58,13 @@ export default function About():JSX.Element {
             </Grid>
             <Grid item xs={11.5} md={6} container alignContent={"center"} justifyContent={"center"}>
               <Typography fontSize={24} fontWeight={700} sx={{color: "#826652"}} align={isMobile ? 'justify' : 'left'}>
-                Established in 2020, my entrepreneurial journey began with a curiosity for fruit carving, evolving seamlessly into crafting exquisite fruit arrangements. The turning point came with the introduction of chocolate-covered strawberries, creating a distinct identity for my business. Despite early challenges that nearly led to closure, perseverance paved the way. Celebrating almost 4 years of success, I'm proud of the sweet success built from dedication and resilience. I absolute love my business. I look forward to creating elegantly designed treats for your next event!
+                Established in 2020, my entrepreneurial journey began with a curiosity for fruit carving, evolving seamlessly into crafting exquisite fruit arrangements. The turning point came with the introduction of chocolate-covered strawberries, creating a distinct identity for my business. Despite early challenges that nearly led to closure, perseverance paved the way. Celebrating almost 4 years of success, I'm proud of the sweet success built from dedication and resilience. I absolutely love my business. I look forward to creating elegantly designed treats for your next event!
               </Typography>
             </Grid>
           </Grid>
         </Container>
       </div>
+      <Footer />
     </>
   )
 }

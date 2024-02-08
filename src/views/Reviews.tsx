@@ -3,6 +3,7 @@ import { Container, Grid } from "@mui/material"
 import Navbar from "../components/Navbar"
 import ReviewCard from "../components/ReviewCard"
 import '../App.css'
+import Footer from "../components/Footer"
 
 
 const reviews: string[] = [
@@ -20,7 +21,7 @@ export default function Reviews():JSX.Element {
       <div
         style={{
           background: `#FFE0F1`,
-          paddingBottom: 20,
+          paddingBottom: 50,
           minHeight: '100vh'
         }}
       >
@@ -36,6 +37,7 @@ export default function Reviews():JSX.Element {
           </Grid>
         </Container>
       </div>
+      <Footer />
     </>
   )
 }
