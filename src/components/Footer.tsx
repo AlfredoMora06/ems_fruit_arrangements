@@ -5,13 +5,26 @@ import Grid from "@mui/material/Grid"
 import InstagramIcon from '@mui/icons-material/Instagram'
 import { useTheme } from "@mui/material"
 import useMediaQuery from "@mui/material/useMediaQuery"
+import { useDispatch, useSelector } from "react-redux"
+import { useTranslation } from "react-i18next"
+
+import { getProfile, updateLanguage } from "../store/features/profileSlice"
 
 
 export default function Footer(): JSX.Element {
   const theme = useTheme()
+  const profile = useSelector(getProfile)
+  const {i18n, t} = useTranslation("common")
   const isMobile = useMediaQuery(theme.breakpoints.down("md"))
   const [anchorElNavLan, setAnchorElNavLan] = React.useState(null)
+  const dispatch = useDispatch()
 
+  React.useEffect(() => {
+    // switch to profile preferred language
+    if (i18n.language !== profile.language) {
+      i18n.changeLanguage(profile.language).then(/*intentionally blank*/)
+    }
+  }, [i18n, profile.language])
 
   const handleOpenNavMenuLan = (event: any) => {
     setAnchorElNavLan(event.currentTarget)
@@ -22,7 +35,8 @@ export default function Footer(): JSX.Element {
   }
 
   const handleCloseNavMenuLanRefresh = (language: string) => {
-    // dispatch(updateLanguage(language))
+    setAnchorElNavLan(null)
+    dispatch(updateLanguage(language))
   }
 
   return (
@@ -35,7 +49,7 @@ export default function Footer(): JSX.Element {
               <Grid item container xs={12} md={9} justifyContent={"center"}>
                 <Grid item xs={12} paddingTop={1}>
                   <Typography variant={isMobile ? "h5" :"h4"} align="center" fontWeight={700} sx={{color: "#6B3F18"}}>
-                    Follow on Instagram for updates and future giveaways!
+                    {t('Footer.follow')}
                   </Typography>
                 </Grid>
                 <Grid item xs={12} container justifyContent={"center"} paddingTop={2}>
@@ -61,7 +75,7 @@ export default function Footer(): JSX.Element {
                     fontSize: isMobile ? 15 : 20
                   }}
                 >
-                  Languages
+                  {t('Footer.button')}
                 </Fab>
                 <Menu
                   anchorEl={anchorElNavLan}
@@ -72,10 +86,10 @@ export default function Footer(): JSX.Element {
                   onClose={handleCloseNavMenuLan}
                 >
                   <MenuItem onClick={() => {handleCloseNavMenuLanRefresh("en")}} sx={{minWidth: 80}}>  
-                    <Typography textAlign="center" paddingLeft={1}>English</Typography>
+                    <Typography textAlign="center" paddingLeft={1}>{t('Footer.english')}</Typography>
                   </MenuItem>
                   <MenuItem onClick={() => {handleCloseNavMenuLanRefresh("es")}} sx={{minWidth: 80}}>
-                    <Typography textAlign="center" paddingLeft={1}>Spanish</Typography>
+                    <Typography textAlign="center" paddingLeft={1}>{t('Footer.spanish')}</Typography>
                   </MenuItem>
                 </Menu>
               </Grid>
