@@ -1,1 +1,43 @@
-{}
+{
+  "About": {
+    "summary": "Establecido en 2020, mi viaje empresarial comenzó con una curiosidad por el tallado de frutas, que evolucionó sin problemas hasta la elaboración de exquisitos arreglos frutales. El punto de inflexión llegó con la introducción de las fresas cubiertas de chocolate, creando una identidad distintiva para mi negocio. A pesar de los desafíos iniciales que casi condujo al cierre, la perseverancia allanó el camino. Celebrando casi 4 años de éxito, estoy orgulloso del dulce éxito construido a partir de la dedicación y la resiliencia. Me encanta mi negocio. ¡Espero crear delicias elegantemente diseñadas para su próximo evento!"
+  },
+  "ContactUs": {
+    "titleOne": "¿Tiene alguna pregunta o desea alguna consulta?",
+    "titleTwo": "¡Envíanos un mensaje y nos comunicaremos contigo lo antes posible!",
+    "fromNameRequired": "Se requiere su nombre",
+    "emailRequired": "Su correo electrónico es requerido",
+    "phoneRequired": "Se requiere su teléfono",
+    "messageRequired": "Se requiere su mensaje",
+    "name": "Nombre",
+    "phone": "Teléfono",
+    "email": "Correo Electrónico",
+    "message": "Mensaje",
+    "submit": "Someter"
+  },
+  "Footer": {
+    "button": "Lenguajes",
+    "english": "Inglés",
+    "follow": "¡Síguenos en Instagram para recibir actualizaciones y futuros sorteos!",
+    "spanish": "Español"
+  },
+  "Home": {
+    "titleOne": "ARREGLOS DE FRUTAS EMS",
+    "titleTwo": "“Trayendo la felicidad una fresa a la vez”"
+  },
+  "Navbar": {
+    "about": "Acerca de mi",
+    "contact": "Contactanos",
+    "home": "Inicio",
+    "order": "Pide Ahora",
+    "reviews": "Reseñas"
+  },
+  "Reviews": {
+    "reviewOne": "Buenos días, muchas gracias de nuevo!! Todo salió tan hermoso y tus delicias eran tan bonitas y sabían deliciosas 🥹🥰🥰 Hiciste tan buen trabajo, no podría estar más feliz❤️",
+    "reviewTwo": "¡Ey! ¡Quería agradecerles y que salió increíble! A mi novia y a mí nos encantó.",
+    "reviewThree": "Chica, ¡las fresas que hiciste para mí fueron HERMOSAS! ¡GRACIAS! Mi mamá fue quien te los encargó❤️",
+    "reviewFour": "Sé que es un orden complicado, pero pensé que si hay alguien que pueda resolverlo, sería tu negocio lol.",
+    "reviewFive": "Dios mío, gracias a Dios que tienes fotos porque estaba tan ocupado que apenas pude verlas😭😭😭😭😭pero Dios mío, salieron tan hermosas, muchas gracias prima, ¡te amamos! ¡Todo se fue!",
+    "reviewSix": "¡NIÑA! ¡OH DIOS MÍO! ¡TE JURO QUE ERES ALGO MÁS! ¡HACES MIS SUEÑOS EN REALIDAD! ¡ESTO SE VE TAN BUENO! Siempre vas más allá, gracias🥹🤎🫶🏽"
+  }
+}

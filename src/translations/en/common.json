@@ -1,1 +1,43 @@
-{}
+{
+  "About": {
+    "summary": "Established in 2020, my entrepreneurial journey began with a curiosity for fruit carving, evolving seamlessly into crafting exquisite fruit arrangements. The turning point came with the introduction of chocolate-covered strawberries, creating a distinct identity for my business. Despite early challenges that nearly led to closure, perseverance paved the way. Celebrating almost 4 years of success, I'm proud of the sweet success built from dedication and resilience. I absolutely love my business. I look forward to creating elegantly designed treats for your next event!"
+  },
+  "ContactUs": {
+    "titleOne": "Have a question or inquiry?",
+    "titleTwo": "Send us a message and we’ll get back to you as soon as possible!",
+    "fromNameRequired": "Name is required",
+    "emailRequired": "Email is required",
+    "phoneRequired": "Phone is required",
+    "messageRequired": "Message is required",
+    "name": "Name",
+    "phone": "Phone",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Submit"
+  },
+  "Footer": {
+    "button": "Languages",
+    "english": "English",
+    "follow": "Follow on Instagram for updates and future giveaways!",
+    "spanish": "Spanish"
+  },
+  "Home": {
+    "titleOne": "EMS FRUIT ARRANGEMENTS",
+    "titleTwo": "“Bringing Happiness One Strawberry At A Time”"
+  },
+  "Navbar": {
+    "about": "About",
+    "contact": "Contact Us",
+    "home": "Home",
+    "order": "Order Now",
+    "reviews": "Reviews"
+  },
+  "Reviews": {
+    "reviewOne": "Good morning, thank you so much again!! Everything came out so beautiful & your treats were so pretty and tasted delicious🥹🥰🥰 You did such a good job, I couldn’t be happier❤️",
+    "reviewTwo": "Hey! I wanted to say thank you and that it came out amazing! My girlfriend and I loved it.",
+    "reviewThree": "Girl the strawberries you made for me were BEAUTIFUL! THANK YOU! My mom was the one that ordered them from you❤️",
+    "reviewFour": "I know it’s a complicated order, but I figured if there’s anyone who can figure it out, it’d be with your business lol.",
+    "reviewFive": "Omg thank goodness you got pictures because I was so busy that I barely got to see them😭😭😭😭😭but omg they came out so gorgeous thank you so much prima we love you!! Everything was GONEEEE!",
+    "reviewSix": "GIRLLLLLL! OH MY GOOODNESSSSSSSS! I SWEARRR YOU ARE SOMETHING ELSEEE! YOU MAKE MY DREAMS INTO REALITY! THIS LOOKS SO GOOD! You always go above and beyond, thank you🥹🤎🫶🏽"
+  }
+}

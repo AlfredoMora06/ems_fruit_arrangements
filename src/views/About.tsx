@@ -2,6 +2,7 @@ import { Container, Grid, Theme, Typography } from "@mui/material"
 import makeStyles from "@mui/styles/makeStyles"
 import { useTheme } from "@mui/material"
 import useMediaQuery from "@mui/material/useMediaQuery"
+import { useTranslation } from "react-i18next"
 
 import Navbar from "../components/Navbar"
 //@ts-ignore
@@ -30,6 +31,7 @@ export default function About():JSX.Element {
   const classes = useStyles()
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down("md"))
+  const {t} = useTranslation("common")
 
   return (
     <>
@@ -58,7 +60,7 @@ export default function About():JSX.Element {
             </Grid>
             <Grid item xs={11.5} md={6} container alignContent={"center"} justifyContent={"center"}>
               <Typography fontSize={24} fontWeight={700} sx={{color: "#826652"}} align={isMobile ? 'justify' : 'left'}>
-                Established in 2020, my entrepreneurial journey began with a curiosity for fruit carving, evolving seamlessly into crafting exquisite fruit arrangements. The turning point came with the introduction of chocolate-covered strawberries, creating a distinct identity for my business. Despite early challenges that nearly led to closure, perseverance paved the way. Celebrating almost 4 years of success, I'm proud of the sweet success built from dedication and resilience. I absolutely love my business. I look forward to creating elegantly designed treats for your next event!
+                {t('About.summary')}
               </Typography>
             </Grid>
           </Grid>

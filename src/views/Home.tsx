@@ -1,15 +1,18 @@
 import { Container, Fade, Grid, Typography } from "@mui/material"
 import { useTheme } from "@mui/material"
 import useMediaQuery from "@mui/material/useMediaQuery"
+import { useTranslation } from "react-i18next"
 
 import Navbar from "../components/Navbar"
 //@ts-ignore
 import Berries from "../assets/Berries.png"
 import Footer from "../components/Footer"
 
+
 export default function Home():JSX.Element {
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down("md"))
+  const {t} = useTranslation("common")
 
   const isMobileStyles = {
     top: isMobile ? '50%' : '64%', 
@@ -40,7 +43,7 @@ export default function Home():JSX.Element {
                     fontWeight={700}
                     fontSize={isMobile ? 45 : 90}
                   >
-                    EMS FRUIT ARRANGEMENTS
+                    {t('Home.titleOne')}
                   </Typography>
                 </Fade>
                 <Fade in={true} timeout={3000}>
@@ -52,7 +55,7 @@ export default function Home():JSX.Element {
                     fontWeight={700}
                     fontSize={isMobile ? 30 : 50}
                   >
-                    “Bringing Happiness One Strawberry At A Time”
+                    {t('Home.titleTwo')}
                   </Typography>
                 </Fade>
               </Grid>

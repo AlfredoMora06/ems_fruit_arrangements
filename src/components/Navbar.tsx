@@ -10,12 +10,14 @@ import MenuIcon from "@mui/icons-material/Menu"
 import IconButton from "@mui/material/IconButton"
 import { useTheme } from "@mui/material"
 import useMediaQuery from "@mui/material/useMediaQuery"
+import { useTranslation } from "react-i18next"
 
 //@ts-ignore
 import Logo from "../assets/Logo.svg"
 
 
 export default function Navbar(): JSX.Element {
+  const {t} = useTranslation("common")
   const location = useLocation()  
   const navigate = useNavigate()
   const [drawer, setDrawer] = React.useState<boolean>(false)
@@ -32,10 +34,10 @@ export default function Navbar(): JSX.Element {
   }
 
   const pages = [
-    { title: "Home", link: "../" },
-    { title: "About", link: "../0/about" },
-    { title: "Reviews", link: "../0/reviews" },
-    { title: "Contact Us", link: "../0/contact" },
+    { title: t("Navbar.home"), link: "../" },
+    { title: t("Navbar.about"), link: "../0/about" },
+    { title: t("Navbar.reviews"), link: "../0/reviews" },
+    { title: t("Navbar.contact"), link: "../0/contact" },
   ]
 
   const list = () => (
@@ -71,7 +73,6 @@ export default function Navbar(): JSX.Element {
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <Grid container justifyContent={'space-between'}>
               <Grid item xs={1} mt={1}>
-                {/* <img width={"100%"} src={ArtLogo} alt="Logo" /> */}
               </Grid>
               <IconButton
                 size='large'
@@ -135,7 +136,7 @@ export default function Navbar(): JSX.Element {
                   fontSize: 24
                 }}
               >
-                Order Now
+                {t("Navbar.order")}
               </Fab>
             </Grid>
           </Box>
