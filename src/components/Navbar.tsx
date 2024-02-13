@@ -15,8 +15,11 @@ import { useTranslation } from "react-i18next"
 //@ts-ignore
 import Logo from "../assets/Logo.svg"
 
+type NavbarProps = {
+  hideOrderNow?: boolean
+}
 
-export default function Navbar(): JSX.Element {
+export default function Navbar({hideOrderNow}: NavbarProps): JSX.Element {
   const {t} = useTranslation("common")
   const location = useLocation()  
   const navigate = useNavigate()
@@ -127,17 +130,21 @@ export default function Navbar(): JSX.Element {
               })}
             </Grid>
             <Grid container item xs={2} alignContent={"center"} justifyContent={"flex-end"}>
-              <Fab
-                variant="extended"
-                style={{
-                  color: "white",
-                  backgroundColor: "#D83583",
-                  fontWeight: 700,
-                  fontSize: 24
-                }}
-              >
-                {t("Navbar.order")}
-              </Fab>
+              { hideOrderNow 
+                ? <></> 
+                : <Fab
+                  variant="extended"
+                  style={{
+                    color: "white",
+                    backgroundColor: "#D83583",
+                    fontWeight: 700,
+                    fontSize: 24
+                  }}
+                  onClick={() => navigate("../0/order")}
+                >
+                  {t("Navbar.order")}
+                </Fab>
+              }
             </Grid>
           </Box>
         </Toolbar>
