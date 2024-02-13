@@ -11,9 +11,11 @@ import IconButton from "@mui/material/IconButton"
 import { useTheme } from "@mui/material"
 import useMediaQuery from "@mui/material/useMediaQuery"
 import { useTranslation } from "react-i18next"
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
 
 //@ts-ignore
 import Logo from "../assets/Logo.svg"
+
 
 type NavbarProps = {
   hideOrderNow?: boolean
@@ -42,6 +44,12 @@ export default function Navbar({hideOrderNow}: NavbarProps): JSX.Element {
     { title: t("Navbar.reviews"), link: "../0/reviews" },
     { title: t("Navbar.contact"), link: "../0/contact" },
   ]
+
+  if(isMobile){
+    pages.push({
+      title: t("Navbar.order"), link: "../0/order"
+    })
+  }
 
   const list = () => (
     <Box
@@ -75,8 +83,6 @@ export default function Navbar({hideOrderNow}: NavbarProps): JSX.Element {
         <Toolbar disableGutters>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <Grid container justifyContent={'space-between'}>
-              <Grid item xs={1} mt={1}>
-              </Grid>
               <IconButton
                 size='large'
                 aria-label="account of current user"
@@ -87,8 +93,11 @@ export default function Navbar({hideOrderNow}: NavbarProps): JSX.Element {
               >
                 <MenuIcon />
               </IconButton>
+              <IconButton className="snipcart-checkout">
+                <ShoppingCartIcon sx={{fontSize: 25, color: '#F484BB'}}/>
+              </IconButton> 
               <SwipeableDrawer
-                anchor="right"
+                anchor="left"
                 PaperProps={{
                   sx: { width: "50%" , overflow: "hidden", backgroundColor: '#826652'},
                 }}
@@ -131,7 +140,9 @@ export default function Navbar({hideOrderNow}: NavbarProps): JSX.Element {
             </Grid>
             <Grid container item xs={2} alignContent={"center"} justifyContent={"flex-end"}>
               { hideOrderNow 
-                ? <></> 
+                ? <IconButton className="snipcart-checkout">
+                  <ShoppingCartIcon sx={{fontSize: 40, color: '#F484BB'}}/>
+                </IconButton> 
                 : <Fab
                   variant="extended"
                   style={{
