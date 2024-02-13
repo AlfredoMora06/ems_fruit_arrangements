@@ -12,6 +12,7 @@ import StrawberryBouquets from "../components/AddToCart/StrawberryBouquets"
 import CandyBouquets from "../components/AddToCart/CandyBouquets"
 import FruitArrangements from "../components/AddToCart/FruitArrangements"
 import StrawberryTowers from "../components/AddToCart/StrawberryTowers"
+import BreakableChocolates from "../components/AddToCart/BreakableChocolates"
 
 
 export default function OrderNow():JSX.Element {
@@ -55,6 +56,11 @@ export default function OrderNow():JSX.Element {
           {
             title === 'Fruit Arrangements'
             ? <FruitArrangements />
+            : <></>
+          }
+          {
+            title === 'Breakable Chocolates'
+            ? <BreakableChocolates />
             : <></>
           }
           {
