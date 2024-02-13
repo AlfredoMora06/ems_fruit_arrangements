@@ -3,8 +3,6 @@ import { useTheme } from "@mui/material"
 import useMediaQuery from "@mui/material/useMediaQuery"
 
 import Navbar from "../components/Navbar"
-//@ts-ignore
-import BERRY_TEMPLATES from "../assets/BERRY_TEMPLATES.png"
 import Footer from "../components/Footer"
 import OrderNavbar from "../components/OrderNavbar"
 import PurchaseItemView from "../components/PurchaseItemView"
@@ -17,16 +15,16 @@ export default function OrderNow():JSX.Element {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"))
   const [activeBuyingOption, setActiveBuyingOption] = React.useState<BuyingOption>(buyingOptions[0])
 
-  const { title } = activeBuyingOption
+  const { title, background } = activeBuyingOption
 
   return (
     <>
-      <div style={{ background: `#FFE0F1`,}}>
+      <div style={{ background: `#FFE0F1`}}>
         <Navbar hideOrderNow={true}/>
         <div
           style={{
             minHeight: '100vh',
-            backgroundImage: `url(${BERRY_TEMPLATES})`,
+            backgroundImage: `url(${background})`,
             backgroundSize: 'cover',
             backgroundPosition: isMobile ? 'right 28% bottom 50%' : 'center'
           }}

@@ -11,10 +11,11 @@ type OrderNavbarProps = {
 export default function ChocolateStrawberries({activeBuyingOption}: OrderNavbarProps): JSX.Element {
 
   return (
-    <Container sx={{marginTop: 5}}>
+    <div>
+    <Container sx={{marginTop: 5, paddingBottom: 10}}>
       <Grid container spacing={2} justifyContent={'center'}>
         <Grid item xs={12} container justifyContent={'center'}>
-          <Typography variant="h3">$15 for 1/2 Dozen</Typography>
+          <Typography variant="h3" fontWeight={700}>$15 for 1/2 Dozen</Typography>
         </Grid>
         <Grid item xs={12} container justifyContent={'center'}>
           <Button
@@ -23,7 +24,7 @@ export default function ChocolateStrawberries({activeBuyingOption}: OrderNavbarP
             className="snipcart-add-item"
             data-item-id="ccs_half_dozen"
             data-item-price="15.00"
-            data-item-url="/0/order"
+            data-item-url="https://65cada75efec34d9ed865ad0.mockapi.io/ems/v1/products"
             data-item-description="1/2 Dozen"
             data-item-name="Half a Dozen Chocolate Covered Strawberries"
           >
@@ -31,9 +32,9 @@ export default function ChocolateStrawberries({activeBuyingOption}: OrderNavbarP
           </Button>
         </Grid>
       </Grid>
-      {/* <Grid container spacing={2} justifyContent={'center'} mt={5}>
+      <Grid container spacing={2} justifyContent={'center'} mt={5}>
         <Grid item xs={12} container justifyContent={'center'}>
-          <Typography variant="h3">$30 for 1 Dozen</Typography>
+          <Typography variant="h3" fontWeight={700}>$30 for 1 Dozen</Typography>
         </Grid>
         <Grid item xs={12} container justifyContent={'center'}>
           <Button
@@ -42,14 +43,15 @@ export default function ChocolateStrawberries({activeBuyingOption}: OrderNavbarP
             className="snipcart-add-item"
             data-item-id="ccs_dozen"
             data-item-price="30.00"
-            data-item-url="/ccs_dozen"
+            data-item-url="https://65cada75efec34d9ed865ad0.mockapi.io/ems/v1/products"
             data-item-description="1 Dozen"
             data-item-name="1 Dozen Chocolate Covered Strawberries"
           >
             Add To Cart
           </Button>
         </Grid>
-      </Grid> */}
+      </Grid>
     </Container>
+    </div>
   )
 }
