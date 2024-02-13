@@ -6,7 +6,6 @@ import Button from "@mui/material/Button"
 import { Grid } from "@mui/material"
 import { useTheme } from "@mui/material"
 import useMediaQuery from "@mui/material/useMediaQuery"
-import { useTranslation } from "react-i18next"
 
 import { BuyingOption } from "../util/BuyingOptions"
 
@@ -18,7 +17,6 @@ type OrderNavbarProps = {
 }
 
 export default function OrderNavbar({activeBuyingOption, setActiveBuyingOption, buyingOptions}: OrderNavbarProps): JSX.Element {
-  const {t} = useTranslation("common")
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down("md"))
 
