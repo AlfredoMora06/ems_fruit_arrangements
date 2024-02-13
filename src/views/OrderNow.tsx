@@ -8,6 +8,10 @@ import OrderNavbar from "../components/OrderNavbar"
 import PurchaseItemView from "../components/PurchaseItemView"
 import { BuyingOption, buyingOptions } from "../util/BuyingOptions"
 import ChocolateStrawberries from "../components/AddToCart/ChocolateStrawberries"
+import StrawberryBouquets from "../components/AddToCart/StrawberryBouquets"
+import CandyBouquets from "../components/AddToCart/CandyBouquets"
+import FruitArrangements from "../components/AddToCart/FruitArrangements"
+import StrawberryTowers from "../components/AddToCart/StrawberryTowers"
 
 
 export default function OrderNow():JSX.Element {
@@ -41,6 +45,26 @@ export default function OrderNow():JSX.Element {
 
           { title === 'Chocolate Covered Strawberries'
             ? <ChocolateStrawberries activeBuyingOption={activeBuyingOption} />
+            : <></>
+          }
+          {
+            title === 'Strawberry Bouquets'
+            ? <StrawberryBouquets />
+            : <></>
+          }
+          {
+            title === 'Fruit Arrangements'
+            ? <FruitArrangements />
+            : <></>
+          }
+          {
+            title === 'Strawberry Towers'
+            ? <StrawberryTowers />
+            : <></>
+          }
+          {
+            title === 'Candy Bouquets'
+            ? <CandyBouquets />
             : <></>
           }
           

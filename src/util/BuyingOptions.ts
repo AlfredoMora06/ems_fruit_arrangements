@@ -50,6 +50,24 @@ import FA4 from "../assets/FA/FA4.png"
 import FA5 from "../assets/FA/FA5.png"
 //@ts-ignore
 import FA6 from "../assets/FA/FA6.png"
+//@ts-ignore
+import BH1 from "../assets/BH/BH1.png"
+//@ts-ignore
+import BH2 from "../assets/BH/BH2.png"
+//@ts-ignore
+import BH3 from "../assets/BH/BH3.png"
+//@ts-ignore
+import BH4 from "../assets/BH/BH4.png"
+//@ts-ignore
+import BH5 from "../assets/BH/BH5.png"
+//@ts-ignore
+import BH6 from "../assets/BH/BH6.png"
+//@ts-ignore
+import TB1 from "../assets/TB/TB1.png"
+//@ts-ignore
+import TB2 from "../assets/TB/TB2.png"
+//@ts-ignore
+import TB3 from "../assets/TB/TB3.png"
 
 
 export type BuyingOptionTitle =  'Chocolate Covered Strawberries' | 'Strawberry Bouquets' | 
@@ -58,8 +76,9 @@ export type BuyingOptionTitle =  'Chocolate Covered Strawberries' | 'Strawberry 
 export type BuyingOption = {
   title: BuyingOptionTitle,
   background: string,
-  images?: string[],
+  images: string[],
   tall?: boolean
+  images2?: string[],
 }
 
 export const buyingOptions: BuyingOption[] = [
@@ -82,7 +101,9 @@ export const buyingOptions: BuyingOption[] = [
   },
   {
     title: 'Breakable Chocolates',
-    background: CHOCOLATE
+    background: CHOCOLATE,
+    images: [BH1, BH2, BH3, BH4, BH5, BH6],
+    images2: [TB1, TB2, TB3]
   },
   {
     title: 'Strawberry Towers',

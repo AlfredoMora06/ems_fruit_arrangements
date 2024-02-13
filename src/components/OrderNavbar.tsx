@@ -1,11 +1,13 @@
+import React from "react"
 import AppBar from "@mui/material/AppBar"
 import Box from "@mui/material/Box"
 import Toolbar from "@mui/material/Toolbar"
 import Container from "@mui/material/Container"
 import Button from "@mui/material/Button"
-import { Grid } from "@mui/material"
+import { Grid, Menu, MenuItem } from "@mui/material"
 import { useTheme } from "@mui/material"
 import useMediaQuery from "@mui/material/useMediaQuery"
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'
 
 import { BuyingOption } from "../util/BuyingOptions"
 
@@ -19,6 +21,21 @@ type OrderNavbarProps = {
 export default function OrderNavbar({activeBuyingOption, setActiveBuyingOption, buyingOptions}: OrderNavbarProps): JSX.Element {
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down("md"))
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null)
+  const open = Boolean(anchorEl)
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setAnchorEl(event.currentTarget)
+  }
+
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  }
+
+  const handleChoose = (buyingOption: BuyingOption) => {
+    setActiveBuyingOption(buyingOption)
+    setAnchorEl(null);
+  }
 
   return (
     <AppBar
@@ -52,6 +69,56 @@ export default function OrderNavbar({activeBuyingOption, setActiveBuyingOption, 
                   </Grid>
                 )
               })}
+            </Grid>
+          </Box>
+
+          <Box sx={{ flexGrow: 2, display: { xs: "flex", md: "none" } }}>
+            <Grid container>
+              <Grid item xs={12} container justifyContent={'center'}>
+                <Button
+                  id="basic-button"
+                  aria-controls={open ? 'basic-menu' : undefined}
+                  aria-haspopup="true"
+                  aria-expanded={open ? 'true' : undefined}
+                  onClick={handleClick}
+                  endIcon={<ArrowDropDownIcon/>}
+                  sx={{color: '#FFFFFF', fontWeight: 700,}}
+                >
+                  Order
+                </Button>
+                <Menu
+                  id="basic-menu"
+                  anchorEl={anchorEl}
+                  open={open}
+                  onClose={handleClose}
+                  MenuListProps={{ 'aria-labelledby': 'basic-button' }}
+                  anchorOrigin={{
+                    vertical: "bottom",
+                    horizontal: "center",
+                  }}
+                  transformOrigin={{
+                    vertical: "top",
+                    horizontal: "center",
+                  }}
+                  sx={{"& .MuiMenu-paper": 
+                  { backgroundColor: "#F484BB", color: 'white' },
+                  }}    
+                >
+                  {
+                    buyingOptions.map((buyingOption) => {
+
+                      return (
+                        <MenuItem sx={{justifyContent: 'center'}}
+                          key={buyingOption.title} 
+                          onClick={() => handleChoose(buyingOption)}
+                        >
+                          {buyingOption.title}
+                        </MenuItem>
+                      )
+                    })
+                  }
+                </Menu>
+              </Grid>
             </Grid>
           </Box>
         </Toolbar>
