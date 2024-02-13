@@ -62,6 +62,34 @@ export default function PurchaseItemView({activeBuyingOption}: PurchaseItemViewP
                 </ImageList>
               : <></>
             }
+
+            
+            { !!activeBuyingOption.images2 
+              ? 
+                <Grid container justifyContent={'center'}>
+                  {activeBuyingOption.images2.map(image => {
+                    return (
+                      <Grid
+                        key={image} 
+                        item
+                        xs={6}
+                        md={4}
+                        p={4}
+                        container
+                        justifyContent={'center'}
+                      >
+                        <img
+                          src={image}
+                          alt='title'
+                          style={{borderRadius: 20}}
+                          width={'100%'}
+                        />
+                      </Grid>
+                    )
+                  })}
+                </Grid>
+              : <></>
+            }
           </Grid>
         </Container>
       </div>

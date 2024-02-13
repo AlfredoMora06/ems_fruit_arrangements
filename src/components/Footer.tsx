@@ -84,6 +84,9 @@ export default function Footer(): JSX.Element {
                   transformOrigin={{ vertical: "top", horizontal: "left"}}
                   open={Boolean(anchorElNavLan)}
                   onClose={handleCloseNavMenuLan}
+                  sx={{"& .MuiMenu-paper": 
+                  { backgroundColor: "#F484BB", color: 'white', borderRadius: 4 },
+                  }}   
                 >
                   <MenuItem onClick={() => {handleCloseNavMenuLanRefresh("en")}} sx={{minWidth: 80}}>  
                     <Typography textAlign="center" paddingLeft={1}>{t('Footer.english')}</Typography>
