@@ -68,10 +68,67 @@ import TB1 from "../assets/TB/TB1.png"
 import TB2 from "../assets/TB/TB2.png"
 //@ts-ignore
 import TB3 from "../assets/TB/TB3.png"
+//@ts-ignore
+import PP1 from "../assets/PP/PP1.jpg"
+//@ts-ignore
+import PP2 from "../assets/PP/PP2.jpg"
+//@ts-ignore
+import PP3 from "../assets/PP/PP3.jpg"
+//@ts-ignore
+import PP4 from "../assets/PP/PP4.jpg"
+//@ts-ignore
+import PP5 from "../assets/PP/PP5.jpg"
+//@ts-ignore
+import PP6 from "../assets/PP/PP6.jpg"
+//@ts-ignore
+import PP7 from "../assets/PP/PP7.jpg"
+//@ts-ignore
+import PP8 from "../assets/PP/PP8.jpg"
+//@ts-ignore
+import PP9 from "../assets/PP/PP9.jpg"
+//@ts-ignore
+import PP10 from "../assets/PP/PP10.jpg"
+//@ts-ignore
+import PP11 from "../assets/PP/PP11.jpg"
+//@ts-ignore
+import PP12 from "../assets/PP/PP12.jpg"
+//@ts-ignore
+import PP13 from "../assets/PP/PP13.jpg"
+//@ts-ignore
+import PP14 from "../assets/PP/PP14.jpg"
+//@ts-ignore
+import PP15 from "../assets/PP/PP15.jpg"
+//@ts-ignore
+import PP16 from "../assets/PP/PP16.jpg"
+//@ts-ignore
+import PP17 from "../assets/PP/PP17.jpg"
+//@ts-ignore
+import PP18 from "../assets/PP/PP18.jpg"
+//@ts-ignore
+import PP19 from "../assets/PP/PP19.jpg"
+//@ts-ignore
+import PP20 from "../assets/PP/PP20.jpg"
+//@ts-ignore
+import PP21 from "../assets/PP/PP21.jpg"
+//@ts-ignore
+import PP22 from "../assets/PP/PP22.jpg"
+//@ts-ignore
+import PP23 from "../assets/PP/PP23.jpg"
+//@ts-ignore
+import PP24 from "../assets/PP/PP24.jpg"
+//@ts-ignore
+import PP25 from "../assets/PP/PP25.jpg"
+//@ts-ignore
+import PP26 from "../assets/PP/PP26.jpg"
+//@ts-ignore
+import PP27 from "../assets/PP/PP27.jpg"
+//@ts-ignore
+import PP28 from "../assets/PP/PP28.jpg"
 
 
 export type BuyingOptionTitle =  'Chocolate Covered Strawberries' | 'Strawberry Bouquets' | 
-'Fruit Arrangements' | 'Breakable Chocolates' | 'Strawberry Towers' | 'Candy Bouquets' 
+'Fruit Arrangements' | 'Breakable Chocolates' | 'Strawberry Towers' | 'Candy Bouquets' | 
+'Party Packages' | 'For Him' | 'For Her'
 
 export type BuyingOption = {
   title: BuyingOptionTitle,
@@ -81,12 +138,14 @@ export type BuyingOption = {
   images2?: string[],
 }
 
+export const chocolateCoveredStrawberries: BuyingOption = {
+  title: 'Chocolate Covered Strawberries',
+  images: [CCS1, CCS2, CCS3, CCS4, CCS5],
+  background: BERRY_TEMPLATES,
+}
+
 export const buyingOptions: BuyingOption[] = [
-  {
-    title: 'Chocolate Covered Strawberries',
-    images: [CCS1, CCS2, CCS3, CCS4, CCS5],
-    background: BERRY_TEMPLATES,
-  },
+  chocolateCoveredStrawberries,
   {
     title: 'Strawberry Bouquets',
     images: [FB1, FB2, FB3, FB4],
@@ -116,5 +175,26 @@ export const buyingOptions: BuyingOption[] = [
     images: [CB1, CB2],
     background: CANDY,
     tall: true
+  },
+  // TODO - Slideshow
+  {
+    title: 'Party Packages',
+    images: [PP1,PP2,PP3,PP4,PP5,PP6,PP7,PP8,PP9,PP10,PP11,PP12,PP13,PP14,PP15,PP16,PP17,PP18,PP19,PP20,PP21,PP22,PP23,PP24,PP25,PP26,PP27,PP28],
+    background: BERRY_TEMPLATES,
+    tall: true
+  },
+  // TODO - Slideshow
+  {
+    title: 'For Him',
+    // TODO - Images Missing
+    images: [],
+    background: CHOCOLATE,
+  },
+  // TODO - Slideshow
+  {
+    title: 'For Her',
+    // TODO - Images Missing
+    images: [],
+    background: TULIPS,
   }
 ]

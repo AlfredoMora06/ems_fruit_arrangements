@@ -13,11 +13,11 @@ import TextArea from "../Fields/TextArea"
 import '../../App.css'
 
 
-type ContactUsFormProps = {
+type ForHimPackageFormProps = {
   sendEmail: (values: any) => Promise<void>
 }
 
-export default function ContactUsForm({sendEmail}: ContactUsFormProps):JSX.Element {
+export default function ForHimPackageForm({sendEmail}: ForHimPackageFormProps):JSX.Element {
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down("md"))
   const profile = useSelector(getProfile)
@@ -31,16 +31,16 @@ export default function ContactUsForm({sendEmail}: ContactUsFormProps):JSX.Eleme
     }
   }, [i18n, profile.language])
 
-  
+  // TODO -- Modify for more accurate pricing request... ?
   return (
     <Container className="fade-in-bottom">
       <Grid container pt={1}>
         <Grid item xs={12}>
           <Typography align="center" fontSize={isMobile ? 18 : 24} fontWeight={700} sx={{color: "#945A02"}}>
-            {t('ContactUs.titleOne')}
+            Request your own 'For Him' package
           </Typography>
           <Typography align="center" fontSize={isMobile ? 18 : 24} fontWeight={700} sx={{color: "#945A02"}}>
-            {t('ContactUs.titleTwo')}
+            We will get back to you with a budget
           </Typography>
         </Grid>
 
@@ -119,7 +119,7 @@ export default function ContactUsForm({sendEmail}: ContactUsFormProps):JSX.Eleme
                     </Grid>
                     <Grid item xs={12} md={10}>
                       <Typography style={typographyStyle}>
-                        {t('ContactUs.message')}
+                        What would you like in your 'For Him' package?
                       </Typography>
                       <TextArea
                         error={Boolean(touched.message && errors.message)}
@@ -137,13 +137,13 @@ export default function ContactUsForm({sendEmail}: ContactUsFormProps):JSX.Eleme
                         sx={{
                           color: "white",
                           backgroundColor: "#D89D44",
-                          fontSize: isMobile ? 18 : 26,
+                          fontSize: isMobile ? 18 : 20,
                           fontWeight: 700,
                           borderRadius: 3,
                           paddingX: isMobile ? 4 : 8
                         }}
                       >
-                        {t('ContactUs.submit')}
+                        Request Pricing
                       </Button>
                     </Grid>
 
