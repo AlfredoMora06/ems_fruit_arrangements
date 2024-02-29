@@ -1,0 +1,138 @@
+[
+  {
+    "url": "/",
+    "price": 15,
+    "customFields": [],
+    "id": "ccs_half_dozen"
+  },
+  {
+    "url": "/",
+    "price": 30,
+    "customFields": [],
+    "id": "ccs_dozen"
+  },
+  {
+    "url": "/",
+    "price": 45,
+    "customFields": [],
+    "id": "dozen_strawberries_six_roses"
+  },
+  {
+    "url": "/",
+    "price": 55,
+    "customFields": [
+      {
+        "name": "Personalized Message",
+        "required": true
+      }
+    ],
+    "id": "dozen_strawberries_six_roses_message"
+  },
+  {
+    "url": "/",
+    "price": 40,
+    "customFields": [
+      {
+        "name": "Your 5 Fruits",
+        "required": true
+      }
+    ],
+    "id": "small_basket_five_fruits"
+  },
+  {
+    "url": "/",
+    "price": 55,
+    "customFields": [
+      {
+        "name": "Your 5 Fruits",
+        "required": true
+      },
+      {
+        "name": "Cholocate covered strawberries or pineapples?",
+        "required": true
+      }
+    ],
+    "id": "small_basket_five_fruits_chocolate"
+  },
+  {
+    "url": "/",
+    "price": 30,
+    "id": "breakable_heart_1",
+    "customFields": []
+  },
+  {
+    "url": "/",
+    "id": "breakable_heart_2",
+    "price": 45,
+    "customFields": [
+      {
+        "name": "6 Strawberries, Pretzel Rods, Rice Krispy, Madeline, Oreo, or Marshmallows",
+        "required": true
+      }
+    ]
+  },
+  {
+    "url": "/",
+    "id": "breakable_heart_2",
+    "price": 75,
+    "customFields": [
+      {
+        "name": "w/12 Strawberries, Pretzel Rods, Rice Krispy, Madeline, Oreo, or Marshmallows and Roses",
+        "required": true
+      }
+    ]
+  },
+  {
+    "url": "/",
+    "id": "breakable_heart_3",
+    "price": 90,
+    "customFields": [
+      {
+        "name": "Extras?",
+        "required": true
+      }
+    ]
+  },
+  {
+    "url": "/",
+    "id": "additional_treat",
+    "price": 2.50,
+    "customFields": []
+  },
+  {
+    "url": "/",
+    "id": "additional_flowers",
+    "price": 15,
+    "customFields": []
+  },
+  {
+    "url": "/",
+    "id": "additional_chocolate",
+    "price": 15,
+    "customFields": []
+  },
+  {
+    "url": "/",
+    "price": 60,
+    "customFields": [],
+    "id": "small_strawberry_tower"
+  },
+  {
+    "url": "/",
+    "price": 110,
+    "customFields": [],
+    "id": "medium_strawberry_tower"
+  },
+  {
+    "url": "/",
+    "price": 150,
+    "customFields": [],
+    "id": "large_strawberry_tower"
+  },
+  {
+    "url": "/",
+    "price": 35,
+    "customFields": [],
+    "id": "candy_bouquets"
+  }
+]

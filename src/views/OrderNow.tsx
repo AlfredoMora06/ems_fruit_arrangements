@@ -13,6 +13,9 @@ import CandyBouquets from "../components/AddToCart/CandyBouquets"
 import FruitArrangements from "../components/AddToCart/FruitArrangements"
 import StrawberryTowers from "../components/AddToCart/StrawberryTowers"
 import BreakableChocolates from "../components/AddToCart/BreakableChocolates"
+import PartyPackages from "../components/AddToCart/PartyPackages"
+import ForHim from "../components/AddToCart/ForHim"
+import ForHer from "../components/AddToCart/ForHer"
 
 
 export default function OrderNow():JSX.Element {
@@ -71,6 +74,21 @@ export default function OrderNow():JSX.Element {
           {
             title === 'Candy Bouquets'
             ? <CandyBouquets />
+            : <></>
+          }
+          {
+            title === 'Party Packages'
+            ? <PartyPackages />
+            : <></>
+          }
+          {
+            title === 'For Him'
+            ? <ForHim setActiveBuyingOption={setActiveBuyingOption}/>
+            : <></>
+          }
+          {
+            title === 'For Her'
+            ? <ForHer setActiveBuyingOption={setActiveBuyingOption}/>
             : <></>
           }
           
