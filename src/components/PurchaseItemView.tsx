@@ -5,6 +5,7 @@ import ImageListItem from "@mui/material/ImageListItem"
 
 import '../App.css'
 import { BuyingOption } from "../util/BuyingOptions"
+import Slideshow from "./Slideshow"
 
 type PurchaseItemViewProps = {
   activeBuyingOption: BuyingOption,
@@ -31,35 +32,37 @@ export default function PurchaseItemView({activeBuyingOption}: PurchaseItemViewP
             </Grid>
 
             { !!activeBuyingOption.images 
-              ? 
-                <ImageList 
-                  sx={{
-                    gridAutoFlow: "column", 
-                    gridTemplateColumns: "repeat(auto-fit, minmax(160px,1fr)) !important", 
-                    gridAutoColumns: "minmax(160px, 1fr)" 
-                  }} 
-                  rowHeight={activeBuyingOption.tall ? 550 : 300}
-                >
-                  {activeBuyingOption.images.map(image => {
-                    return (
-                      <ImageListItem
-                        key={image} 
-                        cols={3} 
-                        sx={{
-                          objectFit: 'contain', 
-                          width: activeBuyingOption.tall ? '70%': '90%',
-                          borderRadius: 50
-                        }}
-                      >
-                        <img
-                          src={image}
-                          alt='title'
-                          style={{borderRadius: 20}}
-                        />
-                      </ImageListItem>
-                    )
-                  })}
-                </ImageList>
+              ? activeBuyingOption.images.length > 7 // Note: Check for a better way for this?
+                ? <Slideshow images={activeBuyingOption.images} />
+                :
+                  <ImageList 
+                    sx={{
+                      gridAutoFlow: "column", 
+                      gridTemplateColumns: "repeat(auto-fit, minmax(160px,1fr)) !important", 
+                      gridAutoColumns: "minmax(160px, 1fr)" 
+                    }} 
+                    rowHeight={activeBuyingOption.tall ? 550 : 300}
+                  >
+                    {activeBuyingOption.images.map(image => {
+                      return (
+                        <ImageListItem
+                          key={image} 
+                          cols={3} 
+                          sx={{
+                            objectFit: 'contain', 
+                            width: activeBuyingOption.tall ? '70%': '90%',
+                            borderRadius: 50
+                          }}
+                        >
+                          <img
+                            src={image}
+                            alt='title'
+                            style={{borderRadius: 20}}
+                          />
+                        </ImageListItem>
+                      )
+                    })}
+                  </ImageList>
               : <></>
             }
 

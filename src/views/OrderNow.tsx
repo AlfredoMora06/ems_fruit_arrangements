@@ -22,6 +22,12 @@ export default function OrderNow():JSX.Element {
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down("md"))
   const [activeBuyingOption, setActiveBuyingOption] = React.useState<BuyingOption>(buyingOptions[0])
+  // Note: top = 21
+  const [topdialog, setTopdialog] = React.useState<boolean>(true)
+
+  const notOverTwentyOne = (): void => {
+    setActiveBuyingOption(buyingOptions[0])
+  }
 
   const { title, background } = activeBuyingOption
 
@@ -83,12 +89,20 @@ export default function OrderNow():JSX.Element {
           }
           {
             title === 'For Him'
-            ? <ForHim setActiveBuyingOption={setActiveBuyingOption}/>
+            ? <ForHim 
+              topdialog={topdialog}
+              setTopdialog={setTopdialog}
+              notOverTwentyOne={notOverTwentyOne}
+            />
             : <></>
           }
           {
             title === 'For Her'
-            ? <ForHer setActiveBuyingOption={setActiveBuyingOption}/>
+            ? <ForHer 
+              topdialog={topdialog}
+              setTopdialog={setTopdialog}
+              notOverTwentyOne={notOverTwentyOne}
+            />
             : <></>
           }
           
