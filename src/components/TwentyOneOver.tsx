@@ -1,8 +1,6 @@
 import { Button, Container, Grid, Typography } from "@mui/material"
 import { useTheme } from "@mui/material"
 import useMediaQuery from "@mui/material/useMediaQuery"
-import CloseIcon from '@mui/icons-material/Close'
-import CheckIcon from '@mui/icons-material/Check'
 
 import '../App.css'
 
@@ -12,7 +10,7 @@ type TwentyOneOverProps = {
   closeTopDialog: () => void
 }
 
-export default function TwentyOneOver({notOverTwentyOne, closeTopDialog}: TwentyOneOverProps):JSX.Element {
+export default function TwentyOneOver({closeTopDialog}: TwentyOneOverProps):JSX.Element {
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down("md"))
 
@@ -21,31 +19,21 @@ export default function TwentyOneOver({notOverTwentyOne, closeTopDialog}: Twenty
       <Grid container pt={1}>
         <Grid item xs={12}>
           <Typography align="center" fontSize={isMobile ? 18 : 24} fontWeight={700} sx={{color: "#945A02"}}>
-            Clients must be 21 or older to order from this package, as they may contain alcohol.
+            Some of these can be ordered with alcohol
           </Typography>
           <Typography align="center" fontSize={isMobile ? 18 : 24} fontWeight={700} sx={{color: "#945A02"}}>
-            Please confirm that you are 21 or older.
+            Please note that clients must be 21 or older to order anything with alcohol
           </Typography>
         </Grid>
       </Grid>
 
       <Grid container mt={7} mb={4}>
-        <Grid item xs={6} container justifyContent={'center'}>
+        <Grid item xs={12} container justifyContent={'center'}>
           <Button
             variant="contained"
-            startIcon={<CheckIcon/>}
             onClick={closeTopDialog}
           >
-            I am 21+
-          </Button>
-        </Grid>
-        <Grid item xs={6} container justifyContent={'center'}>
-          <Button
-            variant="contained"
-            startIcon={<CloseIcon/>}
-            onClick={notOverTwentyOne}
-          >
-            I am not 21+
+            I understand
           </Button>
         </Grid>
       </Grid>

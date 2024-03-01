@@ -124,6 +124,86 @@ import PP26 from "../assets/PP/PP26.jpg"
 import PP27 from "../assets/PP/PP27.jpg"
 //@ts-ignore
 import PP28 from "../assets/PP/PP28.jpg"
+//@ts-ignore
+import FH1 from "../assets/FH/FH1.jpg"
+//@ts-ignore
+import FH2 from "../assets/FH/FH2.jpg"
+//@ts-ignore
+import FH3 from "../assets/FH/FH3.jpg"
+//@ts-ignore
+import FH4 from "../assets/FH/FH4.jpg"
+//@ts-ignore
+import FH5 from "../assets/FH/FH5.jpg"
+//@ts-ignore
+import FH6 from "../assets/FH/FH6.jpg"
+//@ts-ignore
+import FH7 from "../assets/FH/FH7.jpg"
+//@ts-ignore
+import FH8 from "../assets/FH/FH8.jpg"
+//@ts-ignore
+import FH9 from "../assets/FH/FH9.jpg"
+//@ts-ignore
+import FH10 from "../assets/FH/FH10.jpg"
+//@ts-ignore
+import FH11 from "../assets/FH/FH11.jpg"
+//@ts-ignore
+import FH12 from "../assets/FH/FH12.jpg"
+//@ts-ignore
+import FH13 from "../assets/FH/FH13.jpg"
+//@ts-ignore
+import FH14 from "../assets/FH/FH14.jpg"
+//@ts-ignore
+import FH15 from "../assets/FH/FH15.jpg"
+//@ts-ignore
+import FH16 from "../assets/FH/FH16.jpg"
+//@ts-ignore
+import FH17 from "../assets/FH/FH17.jpg"
+//@ts-ignore
+import FH18 from "../assets/FH/FH18.jpg"
+//@ts-ignore
+import FH19 from "../assets/FH/FH19.jpg"
+//@ts-ignore
+import FH20 from "../assets/FH/FH20.jpg"
+//@ts-ignore
+import FH21 from "../assets/FH/FH21.jpg"
+//@ts-ignore
+import FH22 from "../assets/FH/FH22.jpg"
+//@ts-ignore
+import FH23 from "../assets/FH/FH23.jpg"
+//@ts-ignore
+import FHr1 from "../assets/FHr/FHr1.jpg"
+//@ts-ignore
+import FHr2 from "../assets/FHr/FHr2.jpg"
+//@ts-ignore
+import FHr3 from "../assets/FHr/FHr3.jpg"
+//@ts-ignore
+import FHr4 from "../assets/FHr/FHr4.jpg"
+//@ts-ignore
+import FHr5 from "../assets/FHr/FHr5.jpg"
+//@ts-ignore
+import FHr6 from "../assets/FHr/FHr6.jpg"
+//@ts-ignore
+import FHr7 from "../assets/FHr/FHr7.jpg"
+//@ts-ignore
+import FHr8 from "../assets/FHr/FHr8.jpg"
+//@ts-ignore
+import FHr9 from "../assets/FHr/FHr9.jpg"
+//@ts-ignore
+import FHr10 from "../assets/FHr/FHr10.jpg"
+//@ts-ignore
+import FHr11 from "../assets/FHr/FHr11.jpg"
+//@ts-ignore
+import FHr12 from "../assets/FHr/FHr12.jpg"
+//@ts-ignore
+import FHr13 from "../assets/FHr/FHr13.jpg"
+//@ts-ignore
+import FHr14 from "../assets/FHr/FHr14.jpg"
+//@ts-ignore
+import FHr15 from "../assets/FHr/FHr15.jpg"
+//@ts-ignore
+import FHr16 from "../assets/FHr/FHr16.jpg"
+//@ts-ignore
+import FHr17 from "../assets/FHr/FHr17.jpg"
 
 
 export type BuyingOptionTitle =  'Chocolate Covered Strawberries' | 'Strawberry Bouquets' | 
@@ -138,14 +218,12 @@ export type BuyingOption = {
   images2?: string[],
 }
 
-export const chocolateCoveredStrawberries: BuyingOption = {
-  title: 'Chocolate Covered Strawberries',
-  images: [CCS1, CCS2, CCS3, CCS4, CCS5],
-  background: BERRY_TEMPLATES,
-}
-
 export const buyingOptions: BuyingOption[] = [
-  chocolateCoveredStrawberries,
+  {
+    title: 'Chocolate Covered Strawberries',
+    images: [CCS1, CCS2, CCS3, CCS4, CCS5],
+    background: BERRY_TEMPLATES,
+  },
   {
     title: 'Strawberry Bouquets',
     images: [FB1, FB2, FB3, FB4],
@@ -176,25 +254,20 @@ export const buyingOptions: BuyingOption[] = [
     background: CANDY,
     tall: true
   },
-  // TODO - Slideshow
   {
     title: 'Party Packages',
     images: [PP1,PP2,PP3,PP4,PP5,PP6,PP7,PP8,PP9,PP10,PP11,PP12,PP13,PP14,PP15,PP16,PP17,PP18,PP19,PP20,PP21,PP22,PP23,PP24,PP25,PP26,PP27,PP28],
     background: BERRY_TEMPLATES,
     tall: true
   },
-  // TODO - Slideshow
   {
     title: 'For Him',
-    // TODO - Images Missing
-    images: [],
+    images: [FH1,FH2,FH3,FH4,FH5,FH6,FH7,FH8,FH9,FH10,FH11,FH12,FH13,FH14,FH15,FH16,FH17,FH18,FH19,FH20,FH21,FH22,FH23],
     background: CHOCOLATE,
   },
-  // TODO - Slideshow
   {
     title: 'For Her',
-    // TODO - Images Missing
-    images: [],
+    images: [FHr1,FHr2,FHr3,FHr4,FHr5,FHr6,FHr7,FHr8,FHr9,FHr10,FHr11,FHr12,FHr13,FHr14,FHr15,FHr16,FHr17],
     background: TULIPS,
   }
 ]

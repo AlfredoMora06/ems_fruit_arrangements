@@ -7,23 +7,20 @@ import { useSnackbar } from "notistack"
 import Dialog from "../Dialog"
 import ForHerPackageForm from "../forms/ForHerPackageForm"
 import TwentyOneOver from "../TwentyOneOver"
-import { BuyingOption, chocolateCoveredStrawberries } from "../../util/BuyingOptions"
 
 
 type ForHerProps = {
-  setActiveBuyingOption: (activeBuyingOption: BuyingOption) => void
+  topdialog: boolean,
+  setTopdialog: (td: boolean) => void,
+  notOverTwentyOne: () => void,
 }
 
-export default function ForHer({setActiveBuyingOption}: ForHerProps): JSX.Element {
+export default function ForHer(
+  {topdialog, setTopdialog, notOverTwentyOne}: ForHerProps
+): JSX.Element {
   // Note: top = 21
-  const [topdialog, setTopdialog] = React.useState<boolean>(true)
   const [dialog, setDialog] = React.useState<boolean>(false)
   const {enqueueSnackbar} = useSnackbar()
-
-  const notOverTwentyOne = (): void => {
-    setDialog(false)
-    setActiveBuyingOption(chocolateCoveredStrawberries)
-  }
 
   const sendEmail = async (values: any): Promise<void> => {
     await emailjs.send(
