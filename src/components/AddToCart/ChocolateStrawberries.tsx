@@ -27,7 +27,7 @@ export default function ChocolateStrawberries({activeBuyingOption}: OrderNavbarP
             data-item-url="https://65cada75efec34d9ed865ad0.mockapi.io/ems/v1/products"
             data-item-description="1/2 Dozen"
             data-item-name="Half a Dozen Chocolate Covered Strawberries"
-            data-item-taxes="NJ"
+            data-item-taxes="NJ|NY"
           >
             Add To Cart
           </Button>
@@ -47,7 +47,7 @@ export default function ChocolateStrawberries({activeBuyingOption}: OrderNavbarP
             data-item-url="https://65cada75efec34d9ed865ad0.mockapi.io/ems/v1/products"
             data-item-description="1 Dozen"
             data-item-name="1 Dozen Chocolate Covered Strawberries"
-            data-item-taxes="NJ"
+            data-item-taxes="NJ|NY"
           >
             Add To Cart
           </Button>
