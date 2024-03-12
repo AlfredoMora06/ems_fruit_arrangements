@@ -69,6 +69,7 @@ export default function BreakableChocolates(): JSX.Element {
                   data-item-price={price}
                   data-item-url="https://65cada75efec34d9ed865ad0.mockapi.io/ems/v1/products"
                   data-item-name={name}
+                  data-item-taxes="NJ|NY"
                 >
                   Add To Cart
                 </Button>
