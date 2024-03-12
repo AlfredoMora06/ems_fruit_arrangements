@@ -21,6 +21,7 @@ export default function FruitArrangements(): JSX.Element {
               data-item-url="https://65cada75efec34d9ed865ad0.mockapi.io/ems/v1/products"
               data-item-name="Small Basket including up to 5 fruits of your choice"
               data-item-custom1-name="Your 5 Fruits"
+              data-item-taxes="NJ|NY"
             >
               Add To Cart
             </Button>
@@ -41,6 +42,7 @@ export default function FruitArrangements(): JSX.Element {
               data-item-name="Small Basket which includes up to 5 fruits of your choice and chocolate covered strawberries or pineapples"
               data-item-custom1-name="Your 5 Fruits"
               data-item-custom2-name="Chocolate covered strawberries or pineapples?"
+              data-item-taxes="NJ|NY"
             >
               Add To Cart
             </Button>
