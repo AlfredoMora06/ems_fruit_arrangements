@@ -20,6 +20,7 @@ export default function CandyBouquets(): JSX.Element {
               data-item-price="35.00"
               data-item-url="https://65cada75efec34d9ed865ad0.mockapi.io/ems/v1/products"
               data-item-name="Candy Bouquet"
+              data-item-taxes="NJ|NY"
             >
               Add To Cart
             </Button>
