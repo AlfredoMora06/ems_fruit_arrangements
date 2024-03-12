@@ -20,6 +20,7 @@ export default function StrawberryBouquets(): JSX.Element {
             data-item-price="45.00"
             data-item-url="https://65cada75efec34d9ed865ad0.mockapi.io/ems/v1/products"
             data-item-name="1 Dozen Strawberries and 6 Real Roses"
+            data-item-taxes="NJ|NY"
           >
             Add To Cart
           </Button>
@@ -39,6 +40,7 @@ export default function StrawberryBouquets(): JSX.Element {
             data-item-url="https://65cada75efec34d9ed865ad0.mockapi.io/ems/v1/products"
             data-item-name="1 Dozen Strawberries, 6 real roses and any personalized message"
             data-item-custom1-name="Personalized Message"
+            data-item-taxes="NJ|NY"
           >
             Add To Cart
           </Button>
