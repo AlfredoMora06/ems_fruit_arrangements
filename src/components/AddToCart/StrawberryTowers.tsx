@@ -20,6 +20,7 @@ export default function StrawberryTowers(): JSX.Element {
               data-item-price="60.00"
               data-item-url="https://65cada75efec34d9ed865ad0.mockapi.io/ems/v1/products"
               data-item-name="Small Strawberry Tower"
+              data-item-taxes="NJ|NY"
             >
               Add To Cart
             </Button>
@@ -39,6 +40,7 @@ export default function StrawberryTowers(): JSX.Element {
               data-item-price="110.00"
               data-item-url="https://65cada75efec34d9ed865ad0.mockapi.io/ems/v1/products"
               data-item-name="Medium Strawberry Tower"
+              data-item-taxes="NJ|NY"
             >
               Add To Cart
             </Button>
@@ -58,6 +60,7 @@ export default function StrawberryTowers(): JSX.Element {
               data-item-price="150.00"
               data-item-url="https://65cada75efec34d9ed865ad0.mockapi.io/ems/v1/products"
               data-item-name="Large Strawberry Tower"
+              data-item-taxes="NJ|NY"
             >
               Add To Cart
             </Button>
